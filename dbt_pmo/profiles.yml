@@ -1,0 +1,7 @@
+pmo_sentinel:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../data/pmo_sentinel.duckdb'
+      threads: 1

@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: external_data
+    loader: duckdb
+    tables:
+      - name: pmo_enriched
+        meta:
+          external_location: "read_csv_auto('../data/enriched/pmo_enriched.csv')"

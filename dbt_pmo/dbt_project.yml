@@ -1,0 +1,16 @@
+name: 'pmo_sentinel'
+version: '1.0.0'
+config-version: 2
+
+profile: 'pmo_sentinel'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  pmo_sentinel:
+    staging:
+      +materialized: view      # Les vues pour le nettoyage (léger)
+    marts:
+      +materialized: table     # Les tables finales pour Power BI (rapide)
